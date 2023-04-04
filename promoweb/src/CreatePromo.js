@@ -21,10 +21,19 @@ export const CreatePromo = ({ getAllPromos, setMessge, isCreate, setIsUpdate, se
       }
 
     const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
+        if (e.nativeEvent.type === "date") {
+            const newDate = new Date(e.target.value)
+            setFormData({
+                ...formData,
+                [e.target.name]: newDate,
+            });
+        } else {
+            setFormData({
+                ...formData,
+                [e.target.name]: e.target.value,
+            });
+        }
+        
     };
 
     const handleSubmit = (e) => {
@@ -68,7 +77,7 @@ export const CreatePromo = ({ getAllPromos, setMessge, isCreate, setIsUpdate, se
                 alert(error);
             });
     };
-
+    
     return (
         <form className="w-100 px-5">
             <h1 className="mt-5">
@@ -96,12 +105,12 @@ export const CreatePromo = ({ getAllPromos, setMessge, isCreate, setIsUpdate, se
 
             <div className="mt-4">
                 <label className="h3 form-label">Promo promoStart</label>
-                <input value={formData.promoStart} name="promoStart" type="date" className="form-control" onChange={handleChange} />
+                <input value={formData.promoStart} name="promoStart" type="datetime-local" className="form-control" onChange={handleChange} />
             </div>
 
             <div className="mt-4">
                 <label className="h3 form-label">Promo promoEnd</label>
-                <input value={formData.promoEnd} name="promoEnd" type="date" className="form-control" onChange={handleChange} />
+                <input value={formData.promoEnd} name="promoEnd" type="datetime-local" className="form-control" onChange={handleChange} />
             </div>
 
             <div className="mt-4">
