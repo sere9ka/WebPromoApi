@@ -66,7 +66,7 @@ export const App = () => {
               <div>
                 <h1>Promo Create</h1>
                 <div className="mt-5">
-                  <CreatePromo setMessge={setMessge} promo={promo} isCreate={isCreate} setIsCreate={setIsCreate} setIsUpdate={setIsUpdate} />
+                  <CreatePromo  getAllPromos={getAllPromos} setMessge={setMessge} promo={promo} isCreate={isCreate} setIsCreate={setIsCreate} setIsUpdate={setIsUpdate} />
                 </div>
               </div>
               )

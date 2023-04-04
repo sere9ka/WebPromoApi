@@ -17,11 +17,11 @@ namespace appserverproject.Data
                 promosToSeed[i - 1] = new Promo
                 {
                     PromoId = i,
-                    PromoTitle = $"Post {i}",
+                    PromoTitle = $"Promo {i}",
                     PromoType = 1,
                     PromoCurrency = 1,
-                    PromoStart = "28.09.2022",
-                    PromoEnd = "30.09.2022",
+                    PromoStart = new DateTime(),
+                    PromoEnd = new DateTime(),
                 };
             }
 

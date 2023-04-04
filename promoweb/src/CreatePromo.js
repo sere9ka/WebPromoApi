@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { constantsURL } from './utilites/constants';
 
-export const CreatePromo = ({ setMessge, isCreate, setIsUpdate, setIsCreate, promo}) => {
+export const CreatePromo = ({ getAllPromos, setMessge, isCreate, setIsUpdate, setIsCreate, promo}) => {
     const initialFormData = promo ? promo : {};
 
     const [formData, setFormData] = useState(initialFormData);

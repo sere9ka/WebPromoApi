@@ -16,12 +16,10 @@ namespace appserverproject.Data
         public int PromoCurrency { get; set; }
 
         [Required]
-        [MaxLength(50)]
-        public string PromoStart { get; set; } = string.Empty;
+        public DateTime PromoStart { get; set; }
 
         [Required]
-        [MaxLength(50)]
-        public string PromoEnd { get; set; } = string.Empty;
+        public DateTime PromoEnd { get; set; }
 
         [Required]
         [MaxLength(50)]

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -21,8 +22,8 @@ namespace appserverproject.Data.Migrations
                     PromoTitle = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     PromoType = table.Column<int>(type: "INTEGER", nullable: false),
                     PromoCurrency = table.Column<int>(type: "INTEGER", nullable: false),
-                    PromoStart = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    PromoEnd = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
+                    PromoStart = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    PromoEnd = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Model = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     Channel = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false)
                 },
@@ -36,12 +37,12 @@ namespace appserverproject.Data.Migrations
                 columns: new[] { "PromoId", "Channel", "Model", "PromoCurrency", "PromoEnd", "PromoStart", "PromoTitle", "PromoType" },
                 values: new object[,]
                 {
-                    { 1, "", "", 1, "30.09.2022", "28.09.2022", "Post 1", 1 },
-                    { 2, "", "", 1, "30.09.2022", "28.09.2022", "Post 2", 1 },
-                    { 3, "", "", 1, "30.09.2022", "28.09.2022", "Post 3", 1 },
-                    { 4, "", "", 1, "30.09.2022", "28.09.2022", "Post 4", 1 },
-                    { 5, "", "", 1, "30.09.2022", "28.09.2022", "Post 5", 1 },
-                    { 6, "", "", 1, "30.09.2022", "28.09.2022", "Post 6", 1 }
+                    { 1, "", "", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Promo 1", 1 },
+                    { 2, "", "", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Promo 2", 1 },
+                    { 3, "", "", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Promo 3", 1 },
+                    { 4, "", "", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Promo 4", 1 },
+                    { 5, "", "", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Promo 5", 1 },
+                    { 6, "", "", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Promo 6", 1 }
                 });
         }
 
